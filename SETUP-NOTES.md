@@ -11,11 +11,11 @@
 > and explains each step in detail.
 > A single ./bootstrap.sh that takes a fresh clone to a launchable game. What it does:
 >
->    Creates the distrobox (skippable with --no-box)
->    Installs the toolchain inside it — apt.llvm.org repo for jammy-20, the pin file (both hard-won fixes from this chat), all the LLVM 20 packages, and GCC 13 from the toolchain PPA
->    Clean build with the exact working env vars (skippable with --no-build)
->    Runs setup-configs.sh for configs + shims
->    Exports the host launcher
+>    Creates the distrobox (skippable with --no-box)    
+>    Installs the toolchain inside it — apt.llvm.org repo for jammy-20, the pin file (both hard-won fixes from this chat), all the LLVM 20 packages, and GCC 13 from the toolchain PPA  
+>    Clean build with the exact working env vars (skippable with --no-build)  
+>    Runs setup-configs.sh for configs + shims  
+>    Exports the host launcher  
 
 
 ### The container
