@@ -6,6 +6,18 @@
 
 ## Part 1 — Distrobox & toolchain setup
 
+> **2026-11 update:** `bootstrap.sh` in this branch now automates the distrobox +
+> toolchain + build steps below. This document remains as the manual reference
+> and explains each step in detail.
+> A single ./bootstrap.sh that takes a fresh clone to a launchable game. What it does:
+>
+>    Creates the distrobox (skippable with --no-box)
+>    Installs the toolchain inside it — apt.llvm.org repo for jammy-20, the pin file (both hard-won fixes from this chat), all the LLVM 20 packages, and GCC 13 from the toolchain PPA
+>    Clean build with the exact working env vars (skippable with --no-build)
+>    Runs setup-configs.sh for configs + shims
+>    Exports the host launcher
+
+
 ### The container
 - `decomp-env`: Ubuntu 22.04 (jammy) distrobox on Bazzite. Recreate/reenter with `distrobox enter decomp-env`.
 - Builds must run inside the box; everything else (editing, launching) works from the host too (shared $HOME).
