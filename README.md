@@ -1,3 +1,21 @@
+> **This branch:** Rebel Strike (GLRP64) test setup. See [`SETUP-NOTES.md`](SETUP-NOTES.md)
+> for the full toolchain story (GCC 13 + LLVM 20 in an Ubuntu 22.04 distrobox),
+> tuned configs in [`dotconfig/`](dotconfig/), and launcher/packaging in
+> [`setup-configs.sh`](setup-configs.sh) + [`packaging/`](packaging/).
+>
+> **Usage:** clone → create distrobox → install toolchain per SETUP-NOTES Part 1 →
+> `make run ISO=<your legally-owned dump>` → `./setup-configs.sh` →
+> `moderngekko-rebel-strike` (or add to Steam as a non-Steam game).
+>
+> **Known issues & findings:** see [`docs/issue-report.md`](docs/issue-report.md)
+> (compiled-module rejection, SC2/SDL-3.4.4 input via Steam Input, interpreter
+> performance tuning table).
+>
+> Other game configurations live on their own branches (per-game configs
+> & launchers); `main` tracks the upstream template.
+
+
+
 # ModernGekko-Template
 
 A template for building a static-recompilation pipeline for GameCube and Wii games, built on:
