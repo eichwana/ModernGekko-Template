@@ -1,0 +1,426 @@
+ModernGekko and DolRecomp sources already present.
+cmake -S lib/ModernGekko -B lib/ModernGekko/build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+	-DBUILD_TESTING=OFF \
+	-DDOLRECOMP_ENABLE_LLVM=OFF 
+CMake Deprecation Warning at vendor/dolphin/CMakeLists.txt:6 (cmake_policy):
+  The OLD behavior for policy CMP0080 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- Using GCC 14.0.1
+-- Detected architecture: x86_64
+-- Wayland support enabled
+-- X11 support enabled
+-- Using named pipes as controller inputs
+-- Watching game memory for changes
+-- Checking for one of the modules 'fmt>=10.1'
+-- No system FMT was found.  Using static FMT from Externals.
+-- {fmt} version: 12.0.0
+-- Build type: Release
+CMake Warning at vendor/dolphin/CMake/DolphinLibraryTools.cmake:98 (find_package):
+  By not providing "Findglslang.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "glslang", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "glslang"
+  (requested version 15) with any of the following names:
+
+    glslangConfig.cmake
+    glslang-config.cmake
+
+  Add the installation prefix of "glslang" to CMAKE_PREFIX_PATH or set
+  "glslang_DIR" to a directory containing one of the above files.  If
+  "glslang" provides a separate development package or SDK, be sure it has
+  been installed.
+Call Stack (most recent call first):
+  vendor/dolphin/CMakeLists.txt:642 (dolphin_find_optional_system_library)
+
+
+-- No system glslang was found.  Using static glslang from Externals.
+-- Using system Iconv
+-- Could NOT find pugixml (missing: pugixml_LIBRARIES pugixml_INCLUDE_DIRS) 
+-- No system pugixml was found.  Using static pugixml from Externals.
+-- Checking for one of the modules 'libenet>=1.3.18'
+-- No system ENET was found.  Using static ENET from Externals.
+-- Checking for one of the modules 'libxxhash>=0.8.2'
+-- No system xxhash was found.  Using static xxhash from Externals.
+-- Could NOT find BZip2 (missing: BZIP2_LIBRARIES BZIP2_INCLUDE_DIR) 
+-- No system BZip2 was found.  Using static BZip2 from Externals.
+-- Could NOT find LibLZMA (missing: LIBLZMA_LIBRARY LIBLZMA_INCLUDE_DIR LIBLZMA_HAS_AUTO_DECODER LIBLZMA_HAS_EASY_ENCODER LIBLZMA_HAS_LZMA_PRESET) 
+-- No system LibLZMA was found.  Using static LibLZMA from Externals.
+-- Checking for one of the modules 'libzstd>=1.4.0'
+-- No system ZSTD was found.  Using static ZSTD from Externals.
+-- ZSTD VERSION: 1.5.8
+-- CMAKE_INSTALL_PREFIX: /usr/local
+-- CMAKE_INSTALL_LIBDIR: lib
+-- ZSTD_LEGACY_SUPPORT enabled
+-- Multi-threading support enabled
+-- Checking for one of the modules 'zlib>=1.3.1'
+-- No system ZLIB was found.  Using static ZLIB from Externals.
+-- Using CMake version 3.22.1
+-- ZLIB_HEADER_VERSION: 1.2.12
+-- ZLIBNG_HEADER_VERSION: 2.1.0.devel
+-- Arch detected: 'x86_64'
+-- Basearch of 'x86_64' has been detected as: 'x86'
+-- Architecture-specific source files: arch/x86/x86_features.c;arch/x86/slide_hash_avx2.c;arch/x86/chunkset_avx.c;arch/x86/compare256_avx2.c;arch/x86/adler32_avx2.c;arch/x86/adler32_avx512.c;arch/x86/adler32_avx512_vnni.c;arch/x86/chunkset_sse41.c;arch/x86/adler32_sse42.c;arch/x86/insert_string_sse42.c;arch/x86/chunkset_sse2.c;arch/x86/compare256_sse2.c;arch/x86/slide_hash_sse2.c;arch/x86/adler32_ssse3.c;arch/x86/crc32_fold_pclmulqdq.c
+-- The following features have been enabled:
+
+ * CMAKE_BUILD_TYPE, Build type: Release (selected)
+ * AVX2_SLIDEHASH, Support AVX2 optimized slide_hash, using "-mavx2"
+ * AVX_CHUNKSET, Support AVX optimized chunkset, using "-mavx2"
+ * AVX2_COMPARE256, Support AVX2 optimized compare256, using "-mavx2"
+ * AVX2_ADLER32, Support AVX2-accelerated adler32, using "-mavx2"
+ * AVX512_ADLER32, Support AVX512-accelerated adler32, using "-mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake"
+ * AVX512VNNI_ADLER32, Support AVX512VNNI adler32, using "-mavx512f -mavx512dq -mavx512bw -mavx512vl -mavx512vnni -mtune=cascadelake"
+ * SSE42_CRC, Support SSE4.2 optimized CRC hash generation, using "-msse4.2"
+ * SSSE3_ADLER32, Support SSSE3-accelerated adler32, using "-mssse3"
+ * PCLMUL_CRC, Support CRC hash generation using PCLMULQDQ, using "-mssse3 -msse4.2 -mpclmul"
+ * WITH_GZFILEOP, Compile with support for gzFile related functions
+ * ZLIB_COMPAT, Compile with zlib compatible API
+ * WITH_SANITIZER, Enable sanitizer support
+ * WITH_OPTIM, Build with optimisation
+ * WITH_NEW_STRATEGIES, Use new strategies
+ * WITH_AVX2, Build with AVX2
+ * WITH_AVX512, Build with AVX512
+ * WITH_AVX512VNNI, Build with AVX512 VNNI
+ * WITH_SSE2, Build with SSE2
+ * WITH_SSSE3, Build with SSSE3
+ * WITH_SSE41, Build with SSE41
+ * WITH_SSE42, Build with SSE42
+ * WITH_PCLMULQDQ, Build with PCLMULQDQ
+
+-- The following OPTIONAL packages have been found:
+
+ * PkgConfig
+ * OpenGL
+ * Iconv (required version >= 1.14)
+
+-- The following REQUIRED packages have been found:
+
+ * Threads
+
+-- The following features have been disabled:
+
+ * FORCE_TZCNT, Assume CPU is TZCNT capable
+ * ZLIB_SYMBOL_PREFIX, Publicly exported symbols DO NOT have a custom prefix
+ * ZLIB_ENABLE_TESTS, Build test binaries
+ * WITH_FUZZERS, Build test/fuzz
+ * WITH_BENCHMARKS, Build test/benchmarks
+ * WITH_BENCHMARK_APPS, Build application benchmarks
+ * WITH_NATIVE_INSTRUCTIONS, Instruct the compiler to use the full instruction set on this host (gcc/clang -march=native)
+ * WITH_MAINTAINER_WARNINGS, Build with project maintainer warnings
+ * WITH_CODE_COVERAGE, Enable code coverage reporting
+ * WITH_INFLATE_STRICT, Build with strict inflate distance checking
+ * WITH_INFLATE_ALLOW_INVALID_DIST, Build with zero fill for inflate invalid distances
+ * WITH_VPCLMULQDQ, Build with VPCLMULQDQ
+ * INSTALL_UTILS, Copy minigzip and minideflate during install
+
+-- The following OPTIONAL packages have not been found:
+
+ * glslang (required version >= 15)
+ * pugixml
+ * BZip2
+ * LibLZMA
+
+-- Checking for one of the modules 'minizip-ng>=4.0.4'
+-- No system minizip-ng was found.  Using static minizip-ng from Externals.
+-- Using CMake version 3.22.1
+-- Using ZLIB 
+-- Using LZMA 
+-- Using ZSTD 
+-- Using Iconv
+-- The following features have been enabled:
+
+ * CMAKE_BUILD_TYPE, Build type: Release (selected)
+ * AVX2_SLIDEHASH, Support AVX2 optimized slide_hash, using "-mavx2"
+ * AVX_CHUNKSET, Support AVX optimized chunkset, using "-mavx2"
+ * AVX2_COMPARE256, Support AVX2 optimized compare256, using "-mavx2"
+ * AVX2_ADLER32, Support AVX2-accelerated adler32, using "-mavx2"
+ * AVX512_ADLER32, Support AVX512-accelerated adler32, using "-mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake"
+ * AVX512VNNI_ADLER32, Support AVX512VNNI adler32, using "-mavx512f -mavx512dq -mavx512bw -mavx512vl -mavx512vnni -mtune=cascadelake"
+ * SSE42_CRC, Support SSE4.2 optimized CRC hash generation, using "-msse4.2"
+ * SSSE3_ADLER32, Support SSSE3-accelerated adler32, using "-mssse3"
+ * PCLMUL_CRC, Support CRC hash generation using PCLMULQDQ, using "-mssse3 -msse4.2 -mpclmul"
+ * WITH_GZFILEOP, Compile with support for gzFile related functions
+ * ZLIB_COMPAT, Compile with zlib compatible API
+ * WITH_SANITIZER, Enable sanitizer support
+ * WITH_OPTIM, Build with optimisation
+ * WITH_NEW_STRATEGIES, Use new strategies
+ * WITH_AVX2, Build with AVX2
+ * WITH_AVX512, Build with AVX512
+ * WITH_AVX512VNNI, Build with AVX512 VNNI
+ * WITH_SSE2, Build with SSE2
+ * WITH_SSSE3, Build with SSSE3
+ * WITH_SSE41, Build with SSE41
+ * WITH_SSE42, Build with SSE42
+ * WITH_PCLMULQDQ, Build with PCLMULQDQ
+ * MZ_ZLIB, Enables ZLIB compression
+ * MZ_LZMA, Enables LZMA & XZ compression
+ * MZ_ZSTD, Enables ZSTD compression
+ * MZ_ICONV, Enables iconv string encoding conversion library
+
+-- The following features have been disabled:
+
+ * FORCE_TZCNT, Assume CPU is TZCNT capable
+ * ZLIB_SYMBOL_PREFIX, Publicly exported symbols DO NOT have a custom prefix
+ * ZLIB_ENABLE_TESTS, Build test binaries
+ * WITH_FUZZERS, Build test/fuzz
+ * WITH_BENCHMARKS, Build test/benchmarks
+ * WITH_BENCHMARK_APPS, Build application benchmarks
+ * WITH_NATIVE_INSTRUCTIONS, Instruct the compiler to use the full instruction set on this host (gcc/clang -march=native)
+ * WITH_MAINTAINER_WARNINGS, Build with project maintainer warnings
+ * WITH_CODE_COVERAGE, Enable code coverage reporting
+ * WITH_INFLATE_STRICT, Build with strict inflate distance checking
+ * WITH_INFLATE_ALLOW_INVALID_DIST, Build with zero fill for inflate invalid distances
+ * WITH_VPCLMULQDQ, Build with VPCLMULQDQ
+ * INSTALL_UTILS, Copy minigzip and minideflate during install
+ * MZ_COMPAT, Enables compatibility layer
+ * MZ_BZIP2, Enables BZIP2 compression
+ * MZ_LIBCOMP, Enables Apple compression
+ * MZ_FETCH_LIBS, Enables fetching third-party libraries if not found
+ * MZ_FORCE_FETCH_LIBS, Enables fetching third-party libraries always
+ * MZ_PKCRYPT, Enables PKWARE traditional encryption
+ * MZ_WZAES, Enables WinZIP AES encryption
+ * MZ_OPENSSL, Enables OpenSSL for encryption
+ * MZ_LIBBSD, Builds with libbsd crypto random
+ * MZ_COMPRESS_ONLY, Only support compression
+ * MZ_DECOMPRESS_ONLY, Only support decompression
+ * MZ_FILE32_API, Builds using posix 32-bit file api
+ * MZ_BUILD_TESTS, Builds minizip test executable
+ * MZ_BUILD_UNIT_TESTS, Builds minizip unit test project
+ * MZ_BUILD_FUZZ_TESTS, Builds minizip fuzzer executables
+ * MZ_CODE_COVERAGE, Builds with code coverage flags
+
+-- Could NOT find LZO (missing: LZO_INCLUDE_DIR LZO_LIBRARY) 
+-- No system LZO was found.  Using static LZO from Externals.
+-- Checking for one of the modules 'liblz4>=1.8'
+-- No system lz4 was found.  Using static lz4 from Externals.
+-- Checking for one of the modules 'spng'
+-- No system SPNG was found.  Using static SPNG from Externals.
+-- Using static FreeSurround from Externals
+-- Checking for module 'libusb-1.0'
+--   No package 'libusb-1.0' found
+-- libusb-1.0 not found.
+-- No system LibUSB was found.  Using static LibUSB from Externals.
+-- Could NOT find LIBUDEV (missing: LIBUDEV_LIBRARY LIBUDEV_INCLUDE_DIR) 
+-- Using static SDL3 from Externals
+-- dynamic libX11 -> libX11.so.6
+-- dynamic libXext -> libXext.so.6
+-- dynamic libXi -> libXi.so.6
+-- dynamic libXfixes -> libXfixes.so.3
+-- dynamic libXrandr -> libXrandr.so.2
+-- dynamic libXrender -> libXrender.so.1
+-- Checking for module 'fribidi'
+--   No package 'fribidi' found
+-- Checking for module 'libthai'
+--   No package 'libthai' found
+-- Checking for module 'libdrm'
+--   No package 'libdrm' found
+-- Checking for module 'gbm'
+--   No package 'gbm' found
+-- Checking for modules 'wayland-client>=1.18;wayland-egl;wayland-cursor;egl;xkbcommon>=0.5.0'
+--   Found wayland-client, version 1.22.0
+--   Found wayland-egl, version 18.1.0
+--   Found wayland-cursor, version 1.22.0
+--   Found egl, version 1.5
+--   Found xkbcommon, version 1.6.0
+-- dynamic libwayland-client -> libwayland-client.so.0
+-- dynamic libwayland-egl -> libwayland-egl.so.1
+-- dynamic libwayland-cursor -> libwayland-cursor.so.0
+-- dynamic libxkbcommon -> libxkbcommon.so.0
+-- Checking for one of the modules 'dbus-1;dbus'
+-- Checking for one of the modules 'ibus-1.0;ibus'
+-- Checking for one of the modules 'liburing-ffi'
+-- 
+-- SDL3 was configured with the following options:
+-- 
+-- Platform: Linux-7.2.11-ogc4.1.fc44.x86_64
+-- 64-bit:   TRUE
+-- Compiler: /usr/bin/gcc-14
+-- Revision: SDL-3.4.4-release-3.4.4
+-- Vendor:   
+-- 
+-- Subsystems:
+--   Audio:    OFF
+--   Video:    ON
+--   GPU:      OFF
+--   Render:   ON
+--   Camera:   OFF
+--   Joystick: ON
+--   Haptic:   ON
+--   Hidapi:   ON
+--   Power:    ON
+--   Sensor:   ON
+--   Dialog:   ON
+--   Tray:     OFF
+-- 
+-- Options:
+--   SDL_ALSA                    (Wanted: OFF): OFF
+--   SDL_ALSA_SHARED             (Wanted: OFF): OFF
+--   SDL_ALTIVEC                 (Wanted: OFF): OFF
+--   SDL_ARMNEON                 (Wanted: OFF): OFF
+--   SDL_ASAN                    (Wanted: OFF): OFF
+--   SDL_ASSEMBLY                (Wanted: ON): ON
+--   SDL_ASSERTIONS              (Wanted: auto): auto
+--   SDL_AVX                     (Wanted: ON): ON
+--   SDL_AVX2                    (Wanted: ON): ON
+--   SDL_AVX512F                 (Wanted: ON): ON
+--   SDL_BACKGROUNDING_SIGNAL    (Wanted: OFF): OFF
+--   SDL_CCACHE                  (Wanted: OFF): OFF
+--   SDL_CLANG_TIDY              (Wanted: OFF): OFF
+--   SDL_CLOCK_GETTIME           (Wanted: ON): ON
+--   SDL_COCOA                   (Wanted: OFF): OFF
+--   SDL_DBUS                    (Wanted: ON): OFF
+--   SDL_DEPS_SHARED             (Wanted: ON): OFF
+--   SDL_DIRECTX                 (Wanted: OFF): OFF
+--   SDL_DISKAUDIO               (Wanted: OFF): OFF
+--   SDL_DLOPEN_NOTES            (Wanted: ON): ON
+--   SDL_DUMMYAUDIO              (Wanted: OFF): OFF
+--   SDL_DUMMYCAMERA             (Wanted: OFF): OFF
+--   SDL_DUMMYVIDEO              (Wanted: ON): ON
+--   SDL_EXAMPLES                (Wanted: OFF): OFF
+--   SDL_EXAMPLES_LINK_SHARED    (Wanted: OFF): OFF
+--   SDL_FOREGROUNDING_SIGNAL    (Wanted: OFF): OFF
+--   SDL_FRIBIDI                 (Wanted: ON): OFF
+--   SDL_FRIBIDI_SHARED          (Wanted: ON): OFF
+--   SDL_GCC_ATOMICS             (Wanted: ON): ON
+--   SDL_HIDAPI                  (Wanted: ON): ON
+--   SDL_HIDAPI_JOYSTICK         (Wanted: ON): ON
+--   SDL_HIDAPI_LIBUSB           (Wanted: ON): ON
+--   SDL_HIDAPI_LIBUSB_SHARED    (Wanted: OFF): OFF
+--   SDL_IBUS                    (Wanted: ON): OFF
+--   SDL_INSTALL                 (Wanted: OFF): OFF
+--   SDL_INSTALL_TESTS           (Wanted: OFF): OFF
+--   SDL_JACK                    (Wanted: OFF): OFF
+--   SDL_JACK_SHARED             (Wanted: OFF): OFF
+--   SDL_KMSDRM                  (Wanted: ON): OFF
+--   SDL_KMSDRM_SHARED           (Wanted: ON): OFF
+--   SDL_LASX                    (Wanted: OFF): OFF
+--   SDL_LIBC                    (Wanted: ON): ON
+--   SDL_LIBICONV                (Wanted: OFF): OFF
+--   SDL_LIBTHAI                 (Wanted: ON): OFF
+--   SDL_LIBTHAI_SHARED          (Wanted: ON): OFF
+--   SDL_LIBUDEV                 (Wanted: ON): OFF
+--   SDL_LIBURING                (Wanted: ON): OFF
+--   SDL_LSX                     (Wanted: OFF): OFF
+--   SDL_METAL                   (Wanted: OFF): OFF
+--   SDL_MMX                     (Wanted: ON): ON
+--   SDL_OFFSCREEN               (Wanted: ON): ON
+--   SDL_OPENGL                  (Wanted: OFF): OFF
+--   SDL_OPENGLES                (Wanted: OFF): OFF
+--   SDL_OPENVR                  (Wanted: OFF): OFF
+--   SDL_OSS                     (Wanted: OFF): OFF
+--   SDL_PIPEWIRE                (Wanted: ON): OFF
+--   SDL_PIPEWIRE_SHARED         (Wanted: ON): OFF
+--   SDL_PTHREADS                (Wanted: ON): ON
+--   SDL_PTHREADS_SEM            (Wanted: ON): ON
+--   SDL_PULSEAUDIO              (Wanted: OFF): OFF
+--   SDL_PULSEAUDIO_SHARED       (Wanted: OFF): OFF
+--   SDL_RENDER_D3D              (Wanted: OFF): OFF
+--   SDL_RENDER_D3D11            (Wanted: OFF): OFF
+--   SDL_RENDER_D3D12            (Wanted: OFF): OFF
+--   SDL_RENDER_GPU              (Wanted: OFF): OFF
+--   SDL_RENDER_METAL            (Wanted: OFF): OFF
+--   SDL_RENDER_VULKAN           (Wanted: ON): ON
+--   SDL_ROCKCHIP                (Wanted: OFF): OFF
+--   SDL_RPATH                   (Wanted: ON): OFF
+--   SDL_RPI                     (Wanted: OFF): OFF
+--   SDL_SNDIO                   (Wanted: OFF): OFF
+--   SDL_SNDIO_SHARED            (Wanted: OFF): OFF
+--   SDL_SSE                     (Wanted: ON): ON
+--   SDL_SSE2                    (Wanted: ON): ON
+--   SDL_SSE3                    (Wanted: ON): ON
+--   SDL_SSE4_1                  (Wanted: ON): ON
+--   SDL_SSE4_2                  (Wanted: ON): ON
+--   SDL_SYSTEM_ICONV            (Wanted: ON): ON
+--   SDL_TESTS                   (Wanted: OFF): OFF
+--   SDL_TESTS_LINK_SHARED       (Wanted: OFF): OFF
+--   SDL_UNINSTALL               (Wanted: OFF): OFF
+--   SDL_VIRTUAL_JOYSTICK        (Wanted: ON): ON
+--   SDL_VIVANTE                 (Wanted: OFF): OFF
+--   SDL_VULKAN                  (Wanted: ON): ON
+--   SDL_WASAPI                  (Wanted: OFF): OFF
+--   SDL_WAYLAND                 (Wanted: ON): ON
+--   SDL_WAYLAND_LIBDECOR        (Wanted: OFF): OFF
+--   SDL_WAYLAND_LIBDECOR_SHARED (Wanted: OFF): OFF
+--   SDL_WAYLAND_SHARED          (Wanted: ON): ON
+--   SDL_X11                     (Wanted: ON): ON
+--   SDL_X11_SHARED              (Wanted: ON): ON
+--   SDL_X11_XCURSOR             (Wanted: OFF): OFF
+--   SDL_X11_XDBE                (Wanted: OFF): OFF
+--   SDL_X11_XFIXES              (Wanted: OFF): OFF
+--   SDL_X11_XINPUT              (Wanted: OFF): OFF
+--   SDL_X11_XRANDR              (Wanted: OFF): OFF
+--   SDL_X11_XSCRNSAVER          (Wanted: OFF): OFF
+--   SDL_X11_XSHAPE              (Wanted: OFF): OFF
+--   SDL_X11_XSYNC               (Wanted: OFF): OFF
+--   SDL_X11_XTEST               (Wanted: OFF): OFF
+--   SDL_XINPUT                  (Wanted: OFF): OFF
+-- 
+--  Build Shared Library: OFF
+--  Build Static Library: ON
+-- 
+-- Enabled backends:
+--   Video drivers: dummy offscreen wayland(dynamic) x11(dynamic)
+--   X11 libraries: 
+--   Render drivers: vulkan
+--   GPU drivers: disabled
+--   Audio drivers: dummy
+--   Joystick drivers: hidapi linux virtual
+--   Camera drivers: dummy
+-- 
+-- If something was not detected, although the libraries
+-- were installed, then make sure you have set the
+-- CMAKE_C_FLAGS and CMAKE_PREFIX_PATH CMake variables correctly.
+-- 
+-- Could NOT find SFML (missing:  SFML_NETWORK_LIBRARY SFML_SYSTEM_LIBRARY)
+-- No system SFML was found.  Using static SFML from Externals.
+-- Could NOT find MBEDTLS (missing: MBEDTLS_INCLUDE_DIR MBEDTLS_LIBRARY MBEDX509_LIBRARY MBEDCRYPTO_LIBRARY) (Required is at least version "2.28")
+-- No system MBEDTLS was found.  Using static MBEDTLS from Externals.
+-- Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR) 
+-- No system CURL was found.  Using static CURL from Externals.
+-- Using CMake version 3.22.1
+-- curl version=[8.15.0-DEV]
+-- CMake platform flags: UNIX GCC
+-- Picky compiler options: -Werror-implicit-function-declaration -W -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wmissing-parameter-type -Wold-style-declaration -Wpragmas -Wstrict-aliasing=3 -ftree-vrp -Wjump-misses-init -Wdouble-promotion -Wformat=2 -Wtrampolines -Warray-bounds=2 -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Wunused-const-variable -Walloc-zero -Wduplicated-branches -Wformat-truncation=2 -Wimplicit-fallthrough -Wrestrict -Warith-conversion -Wenum-conversion -Warray-compare -Wenum-int-mismatch -Wxor-used-as-pow
+-- Protocols: http https ws wss
+-- Features: alt-svc AsynchDNS HTTPS-proxy IPv6 Largefile NTLM SSL threadsafe UnixSockets
+-- Enabled SSL backends: mbedTLS
+-- Could NOT find HIDAPI (missing: HIDAPI_LIBRARY HIDAPI_INCLUDE_DIR) 
+-- No system HIDAPI was found.  Using static HIDAPI from Externals.
+-- Could NOT find LIBUDEV (missing: LIBUDEV_LIBRARY LIBUDEV_INCLUDE_DIR) 
+-- Could NOT find SYSTEMD (missing: SYSTEMD_LIBRARIES SYSTEMD_INCLUDE_DIRS) 
+-- libsystemd not found, disabling traversal server watchdog support
+-- Unit tests are disabled
+-- Could NOT find ALSA (missing: ALSA_LIBRARY ALSA_INCLUDE_DIR) 
+-- ALSA NOT found, disabling ALSA sound backend
+-- PulseAudio NOT found, disabling PulseAudio sound backend
+-- Could NOT find BlueZ (missing: BlueZ_LIBRARIES BlueZ_INCLUDE_DIR) 
+-- BlueZ NOT found, disabling bluetooth support
+-- Codegen source digest: 21d6b77cc682d629f0b3a438a58053e3bf94cf7c0f105c150d430b4145f0ba75 (53 files)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bazzite/Games/GC/ModernGekko-Template/lib/ModernGekko/build
+cmake --build lib/ModernGekko/build --target moderngekko-port -j32
+[0/2] Re-checking globbed directories...
+[1/6] Refreshing dolrecomp beside moderngekko-port
+[2/6] cd /home/bazzite/Games/GC/ModernGekko-Template/lib/ModernGekko/build/vendor/dolphin && /usr/bin/cmake -DPROJECT_SOURCE_DIR=/home/bazzite/Games/GC/ModernGekko-Template/lib/ModernGekko/vendor/dolphin -DPROJECT_BINARY_DIR=/home/bazzite/Games/GC/ModernGekko-Template/lib/ModernGekko/build/vendor/dolphin -DDISTRIBUTOR=ModernGekko -DDOLPHIN_DEFAULT_UPDATE_TRACK= -DGIT_FOUND=TRUE -DGIT_EXECUTABLE=/usr/bin/git -DDOLPHIN_WC_REVISION= -DDOLPHIN_WC_DESCRIBE= -DDOLPHIN_WC_BRANCH= -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0.0 -P /home/bazzite/Games/GC/ModernGekko-Template/lib/ModernGekko/vendor/dolphin/CMake/ScmRevGen.cmake
+fatal: bad revision '^master'
+cmake -S lib/DolRecomp -B lib/DolRecomp/build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+	-DBUILD_TESTING=OFF \
+	-DDOLRECOMP_ENABLE_LLVM=OFF 
+-- Codegen source digest: 21d6b77cc682d629f0b3a438a58053e3bf94cf7c0f105c150d430b4145f0ba75 (53 files)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bazzite/Games/GC/ModernGekko-Template/lib/DolRecomp/build
+cmake --build lib/DolRecomp/build --target dolrecomp -j32
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+lib/ModernGekko/build/moderngekko-port run extracted/rebel-strike --backend c --toolchain auto --output build/modules -- 
+[staticrecomp] core init
+[staticrecomp] module loaded: build/modules/GLRP64/8121891effb221e3f0978711a114819ec9caf7a5f1f3ac7a4e45fe16ba39282b-97f85d88446eda3f/gGLRP64_recomp.so entry=0x80003100

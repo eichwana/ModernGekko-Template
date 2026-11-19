@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /home/bazzite/Games/GC/ModernGekko-Template/launch-rebel-strike.sh "$@"

@@ -12,3 +12,9 @@ CMakeUserPresets.json
 # OS
 .DS_Store
 Thumbs.db
+iso/
+extracted/
+build/
+*.iso
+*.rvz
+rebel-strike.log

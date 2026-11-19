@@ -1,0 +1,10 @@
+#!/bin/sh
+# distrobox_binary
+# name: decomp-env
+if [ -z "${CONTAINER_ID}" ]; then
+	exec "/usr/bin/distrobox-enter"  -n decomp-env  --  '/home/bazzite/bin/moderngekko-rebel-strike'  "$@"
+elif [ -n "${CONTAINER_ID}" ] && [ "${CONTAINER_ID}" != "decomp-env" ]; then
+	exec distrobox-host-exec '/home/bazzite/.local/bin/moderngekko-rebel-strike' "$@"
+else
+	exec  '/home/bazzite/bin/moderngekko-rebel-strike' "$@"
+fi
